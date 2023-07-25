@@ -5,8 +5,24 @@
 #        update_right = xor_strings(left)
 
 def change_to_bit(plain: str):
-    return "".join(format(ord(c), "0>8b") for c in plain)
-#8b는 2진수의 8
+    bit2 = ''
+    count = 0
+    for d in plain:
+        bit = bin(ord(d))[2:]
+        for c in bit2:
+            if c == 1:
+                count += 1
+            else:
+                continue
+        if (count % 2) == 0:
+            bit1 = bit + str(0)
+        
+        else:
+            bit1 = bit + str(1)
+        bit2 += bit1
+    
+    
+    return bit2
 
 def bit_to_bitarray(plain: str):
     bit = change_to_bit(plain)
