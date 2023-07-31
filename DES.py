@@ -142,9 +142,9 @@ def change_to_bit(plain: str):
     return bit2
 
 '''
-11행 입력받은 문자열을 이진수로 변환
-12행 for문은 각 이진수의 문자를 보고 1일 경우 카운트업
-17행 카운트값이 짝수일 경우, 7자리 이진수 값에 0을 추가
+129행 입력받은 문자열을 이진수로 변환
+130행 for문은 각 이진수의 문자를 보고 1일 경우 카운트업
+135행 카운트값이 짝수일 경우, 7자리 이진수 값에 0을 추가
      카운트값이 홀수일 경우, 7자리 이진수 값에 1을 추가
      패리티비트를 추가한 코드.(짝수 패리티비트)
 '''
@@ -163,7 +163,7 @@ def bitarray_to_plain(bitarray: bytearray):
 
 def permutation(text: bytearray, table: list[int], length: int):
     permutated_text = bytearray(length)
-    
+
     for num in range(len(table)):
         point = table[num]-1     #IP_table은 1부터 시작하지만 text의 인덱스는 0부터 시작하기때문에 -1 수행
         permutated_text[num] = text[point]
