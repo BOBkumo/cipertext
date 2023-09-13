@@ -1,0 +1,10 @@
+function s_find = S_BOX_func(R_k_column,i,S_BOX)
+s_col = R_k_column(i,2:5);
+s_col = fliplr(s_col);
+s_col = bi2de(s_col);
+s_line = R_k_column(i,1:5:6);
+s_line = fliplr(s_line);
+s_line = bi2de(s_line);
+s_find = S_BOX(s_line+1,s_col+1);
+s_find = de2bi(s_find,4);
+s_find = fliplr(s_find);
